@@ -1,0 +1,11 @@
+<article>
+    <form class="login-form" action="//localhost:8080/message_create" method="post">
+        <label>名前入力</label><br>
+        <input type="text" name="name"><br>
+        <input type="submit" value="送信">
+    </form>
+<article>
+<h2>投稿者名</h2>
+{{range $user := .Users}}
+    <p><label>{{ $user.ID }}</label>：{{ $user.Name }}</p>
+{{end}}
